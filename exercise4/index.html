@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <video id="container_video">
+            <source src="./assets/video/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="div-block container_btn__play">
+            <img src="./assets/icon/play.svg" alt="">
+        </button>
+
+        <div class="div-block container_control">
+            <div class="container_control__infor">
+                <div class="container_control__infor__title__video">
+                    <h2>Bear Animation</h2>
+                    <p>Documentary</p>
+                </div>
+                <div class="container_control__infor__time__video">
+                    <div ><span class="time_current">00:00</span> / <span class="time_video">00:00</span></div>
+                </div>
+            </div>
+
+            <div class="container_control__progress__bar">
+                <div class="container_control__progress__bar__current"></div>
+                <div class="container_control__progress__bar__thumb"></div>
+            </div>
+            <div class="container_control__btn">
+                <div class="container_control__btn__left">
+                    <img class="container_control__btn__left__play" src="./assets/icon/stop.svg" alt="">
+                    <img class="container_control__btn__left__back" src="./assets/icon/back15s.svg" alt="">
+                    <img class="container_control__btn__left__next" src="./assets/icon/next15s.svg" alt="">
+                </div>
+                <div class="container_control__btn__right">
+                    <img class="container_control__btn__right__sound" src="./assets/icon/sound.svg" alt="">
+                    <img class="container_control__btn__right__screen" src="./assets/icon/fullscreen.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f1f1f1;
+            padding-top: 100px;
+        }
+
+        .container {
+            position: relative;
+            width: 700px;
+            height: 500px;
+            margin: 0 auto;
+            border: 1px solid #000;
+            background-color: white;
+            overflow: hidden; 
+        }
+
+        .container__box-red {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            position: absolute; 
+            transition: transform 1s ease; 
+        }
+
+        .container__box-question {
+            position: absolute;
+            background-color: blue;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            font-weight: 600;
+            color: white;
+            bottom: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container__box-red"></div>
+        <div class="container__box-question">?</div>
+    </div>
+
+    <script>
+        const boxRedElement = document.querySelector('.container__box-red');
+
+        function moveTo(translateX, translateY) {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    boxRedElement.style.transform = `translate(${translateX}px, ${translateY}px)`;
+                    resolve();
+                }, 2000);
+            });
+        }
+
+        async function moveBox() {
+            await moveTo(600, 0);   
+            await moveTo(600, 400); 
+            await moveTo(0, 400);   
+            await moveTo(0, 0);     
+        }
+
+        moveBox(); 
+    </script>
+</body>
+
+</html>
